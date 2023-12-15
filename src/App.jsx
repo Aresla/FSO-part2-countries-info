@@ -3,7 +3,6 @@ import axios from "axios";
 import './App.css'
 import Country from "./components/Country";
 
-
 const App = () => {
   const [inputValue, setInputValue] = useState('')
   console.log("inputValue:", inputValue);
@@ -18,7 +17,6 @@ const App = () => {
     }
     getData();
   }, [])
-
 
 const ListOfCountries = ({ countriesNames, inputValue }) => {
   if (countriesNames) {
