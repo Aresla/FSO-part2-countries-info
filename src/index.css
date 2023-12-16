@@ -18,15 +18,16 @@ body {
   min-height: 100vh;
 }
 
+button {
+  background-color: lightblue;
+  border-radius: 0.5rem;
+  margin-top: 0.3rem;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: lightsteelblue;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+
 }
