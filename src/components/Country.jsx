@@ -1,10 +1,10 @@
-const Country = (country) => {
-    const name = country.country.name.common.toUpperCase();
-    const capital = country.country.capital[0];
-    const area = country.country.area;
-    const languages = Object.values(country.country.languages);
+const Country = ({ country }) => {
+    const name = country.name.common.toUpperCase();
+    const capital = country.capital[0];
+    const area = country.area;
+    const languages = Object.values(country.languages);
     const languagesList = languages.map((language) => <li key={language}>{language}</li>);
-    const flag = country.country.flags.png;     
+    const flag = country.flags.png;     
     return (
       <>
         <h2>{name}</h2>
@@ -13,7 +13,7 @@ const Country = (country) => {
         <h4>languages:</h4>
         <div>{languagesList}</div>
         <br></br>
-        <img src={flag} alt={country.country.flags.alt}></img>
+        <img src={flag} alt={country.flags.alt}></img>
       </>
     )
   }
