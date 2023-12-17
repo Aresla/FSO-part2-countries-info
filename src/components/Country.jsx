@@ -7,13 +7,19 @@ const Country = ({ country }) => {
     const flag = country.flags.png;     
     return (
       <>
-        <h2>{name}</h2>
-        <div>capital {capital}</div>
-        <span>area {area}</span>
-        <h4>languages:</h4>
-        <div>{languagesList}</div>
-        <br></br>
-        <img src={flag} alt={country.flags.alt}></img>
+      <section style={{display:'flex', justifyContent:'space-between'}}>
+        <div>
+          <h2>{name}</h2>
+          <div>capital: {capital}</div>
+          <span>area: {area}</span>
+          <h4>languages:</h4>
+          <div>{languagesList}</div>
+        </div>
+        <div>
+          <br></br>
+          <img src={flag} alt={country.flags.alt}></img>
+        </div>  
+      </section>
       </>
     )
   }
