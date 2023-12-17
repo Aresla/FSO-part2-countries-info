@@ -3,6 +3,7 @@ import axios from "axios";
 import './App.css'
 import Country from "./components/Country";
 import ListOfCountries from "./components/ListOfCountries";
+import CityWeather from "./components/CityWeather";
 
 const App = () => {
   const [inputValue, setInputValue] = useState('')
@@ -38,12 +39,10 @@ const App = () => {
     <div>
       find countries: <input value={inputValue} onChange={handleInputValue}/>
       {foundCountries.length > 10 && <p>Too many matches, specify another filter</p>}
-      {foundCountries.length === 0 && <p></p>}
-      {foundCountries.length <= 10 && foundCountries.length > 1 && <ListOfCountries 
-        countries={foundCountries} 
-        onSelect={handleCountrySelect} />
-      }
+      {foundCountries.length === 0 && <p>No matches, specify another filter</p>}
+      {foundCountries.length <= 10 && foundCountries.length > 1 && <ListOfCountries countries={foundCountries} onSelect={handleCountrySelect} />}
       {foundCountries.length === 1 && <Country country={foundCountries[0]} />}
+      {foundCountries.length === 1 && <CityWeather country={foundCountries[0]} />}
     </div>
   )
 }
