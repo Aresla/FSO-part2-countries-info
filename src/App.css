@@ -5,4 +5,17 @@
   text-align:left;
 }
 
+.bold {
+  font-weight: 600;
+}
 
+.countryInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 769px) {
+  .countryInfo {
+    flex-direction: column;
+  }
+}
