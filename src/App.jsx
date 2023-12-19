@@ -37,7 +37,7 @@ const App = () => {
 
   return (
     <div>
-      find countries: <input value={inputValue} onChange={handleInputValue}/>
+      find countries: <input name="finder" value={inputValue} onChange={handleInputValue}/>
       {foundCountries.length > 10 && <p>Too many matches, specify another filter</p>}
       {foundCountries.length === 0 && <p>No matches, specify another filter</p>}
       {foundCountries.length <= 10 && foundCountries.length > 1 && <ListOfCountries countries={foundCountries} onSelect={handleCountrySelect} />}
