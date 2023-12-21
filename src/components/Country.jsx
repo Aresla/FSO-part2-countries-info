@@ -18,7 +18,7 @@ const Country = ({ country }) => {
           <div>languages:</div>
           <div><span className='bold'>{languagesList}</span></div>
         </div>
-        <div>
+        <div className='image'>
           <br></br>
           <img src={flag} alt={country.flags.alt}></img>
         </div>  
